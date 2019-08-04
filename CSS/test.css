@@ -111,7 +111,7 @@ div.background_image img{
 div.background_image h1 {
 	color:white;
 	position: absolute;
-	top:60%;
+	top:50%;
 	left:50%;
 	transform: translate(-50%,-50%);
 	font-size: 40px;
