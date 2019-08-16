@@ -39,18 +39,7 @@
 }
 @keyframes doimauItems {
 	100% {
-		color:darkcyan;
-	}
-}
-@keyframes transformScaleH1{
-	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(0.9);
-	}
-	100% {
-		transform: scale(1);
+		color: #D6D7DC;
 	}
 }
 
@@ -257,7 +246,6 @@ div.introduction > div {
 }
 div.introduction div h1 {
 	font-size: 50px;
-	animation: transformScaleH1 1s infinite;
 }
 div.introduction div p {
 	font-size: 20px;
@@ -273,7 +261,6 @@ div.introduction > div.introduction-img {
 div.introduction > div > img {
 	position:relative;
 	width: 100%;
-	box-shadow: 2px 2px 15px black;
 }
 div.support > div {
 	width: 50%;
@@ -953,8 +940,18 @@ div.speech-person > div > p {
     margin: 0 auto;
 }
 
-
-
+/* go to top button */
+div.gototop {
+	position: fixed;
+	bottom: 5px;
+	right: 10px;
+	z-index: 20;
+	opacity: 0.6;
+	cursor: pointer;
+}
+div.gototop img {
+	width: 100%;
+}
 
 
 
