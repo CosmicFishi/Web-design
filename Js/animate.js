@@ -9,6 +9,20 @@ $(document).ready(function() {
     $("div.gototop img").click(function(){
         $("html, body").animate({scrollTop:0}, 1200);
     });
+
+
+    $("div.Word-BT > div.word-para:not(:first-child)").hide();
+    var count = 1;
+    $("#buttonID").click(function() {
+        if(count < 3)
+        {
+            count = count+1;
+            $("div.Word-BT > div.word-para").hide();
+            $("div.Word-BT > div.word-para:nth-child(" +  count+ ")").show();
+        }
+        else
+            alert("Bạn đã hoàn thành bài , vui lòng quay lại trang trước");
+    });
 });
 
 /* doi ảnh */
