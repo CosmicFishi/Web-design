@@ -56,7 +56,7 @@ a {
 }
 body {
 	background-color: white;
-	font-family: Century Gothic, sans-serif;
+	font-family: Roboto, sans-serif;
 }
 b {
 	color: #232323;
@@ -275,7 +275,10 @@ div.course-p {
 }
 div.course-p h2 {
 	text-align: center;
+}
+div.course-p h2 a {
 	font-size: 40px;
+	color: black;
 }
 div.course-p p ,div.course-p ul li {
 	padding: 5px 40px ;
@@ -354,9 +357,14 @@ div.content div p.Dia-second {
 	bottom: 40px;
 	left: 20px;
 }
+div.content h2 a{
+	font-size: 40px;
+	border: none;
+}
 div.content a {
 	color: white;
 	border-bottom: 2px solid white;
+	font-size: 20px;
 }
 div.Mid-item {
 	background-color:#808080;
@@ -387,6 +395,11 @@ div.Mid-item div a {
 	color: white;
 	font-size: 20px;
 	border-bottom: 2px solid white;
+}
+div.Mid-item div p.headline a {
+	font-size: 35px;
+	border: none;
+	font-weight: bold;
 }
 div.items div.content:last-child div:last-child p.Dia-first {
 	font-size: 50px;
