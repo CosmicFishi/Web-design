@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body div.container {
+  position: relative;
+  width: 100%;
+}
+
+body div.container div.image {
+  position: relative;
+}
+
+body div.container div.image img {
+  width: 100%;
+  display: block;
+}
+
+body div.container div.Menu-items {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+}
+
+body div.container div.Menu-items div.item {
+  float: right;
+  padding: 20px 40px;
+  color: #404040;
+  font-size: 16px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body div.container div.Menu-items div.item:hover {
+  color: #A6A6A6;
+}
+/*# sourceMappingURL=style.css.map */
