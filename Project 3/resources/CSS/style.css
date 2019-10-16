@@ -1,0 +1,217 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.container {
+  position: relative;
+  color: white;
+  height: auto;
+}
+
+.container .image {
+  height: auto;
+}
+
+.container .image img {
+  width: 100%;
+  z-index: -1;
+}
+
+.container .Menu-bar {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .Menu-bar h2 {
+  margin: 5px 10px;
+  font-weight: normal;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container .Menu-bar h2::after, .container .Menu-bar h2::before {
+  content: ' ';
+  display: block;
+  border-bottom: 2px solid white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.container .Menu-bar h2:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.container .intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 15px;
+  width: 50%;
+  background-color: transparent;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  /* xử lý cho Intro, thêm vào khung cho after của intro*/
+}
+
+.container .intro::after {
+  content: ' ';
+  position: absolute;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  z-index: -1;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  /* để nó có thể đi từ trái qua phải*/
+  opacity: 1;
+}
+
+.container .intro:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.container .intro:hover h1::after, .container .intro:hover h1, .container .intro:hover p {
+  opacity: 1;
+  color: black;
+}
+
+.container .intro h1 {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.container .intro h1::after {
+  content: 'True Fashion';
+  position: absolute;
+  font-size: 18px;
+  bottom: 0%;
+  right: -50%;
+  opacity: 0;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.container.secondary {
+  background-color: #262626;
+  position: relative;
+  padding: 20px;
+}
+
+.container.secondary .search-intro {
+  padding: 10px;
+}
+
+.container.secondary .search-intro h2 {
+  font-weight: normal;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.container.secondary .search-intro p {
+  font-size: 16px;
+  padding: 15px;
+}
+
+.container.secondary .search {
+  padding: 20px;
+  position: relative;
+}
+
+.container.secondary .search .search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.container.secondary .search .search-container input[type=text] {
+  width: 90%;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.container.secondary .search .search-container button {
+  width: 9%;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.trending-tab h3 {
+  font-size: 25px;
+  padding: 10px 10px 10px 20px;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.trending-tab h3::after, .trending-tab h3::before {
+  content: ' ';
+  display: block;
+  border-bottom: 2px solid black;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.trending-tab h3:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.trending-tab .trending-tab-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.trending-tab .trending-tab-container div {
+  width: 20%;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.trending-tab .trending-tab-container div img {
+  width: 100%;
+}
+
+.trending-tab .trending-tab-container div:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+/*# sourceMappingURL=style.css.map */

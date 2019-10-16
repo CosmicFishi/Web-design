@@ -1,0 +1,195 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    position: relative;
+    color: white;
+    height: auto;
+
+    .image {
+        height: auto;
+        img {
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    
+    .Menu-bar {
+
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        display: flex;
+
+        h2 {
+            margin: 5px 10px;
+            font-weight: normal;
+            font-size: 18px;
+            cursor: pointer;
+
+            &::after, &::before {
+                content: ' ';
+                display: block;
+                border-bottom: 2px solid white;
+                transform: scaleX(0);
+                transition: 0.2s ease-in-out;
+            }
+    
+            &:hover:after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    .intro {
+        position: absolute;
+        top: 50%;
+        left: 50%;;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        width: 50%;
+        background-color: transparent;
+        transition: 250ms ease-in-out;
+
+        /* xử lý cho Intro, thêm vào khung cho after của intro*/
+        &::after {
+            content: ' ';
+            position: absolute;
+            transition: 250ms ease-in-out;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            transform: scaleX(0);
+            z-index: -1;
+            transform-origin: 0% 50%; /* để nó có thể đi từ trái qua phải*/
+            opacity: 1;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            
+        }
+
+        &:hover h1::after, &:hover h1, &:hover p  {
+            opacity: 1;
+            color: black
+        }
+
+        h1 {
+            font-size: 45px;
+            font-weight: bold;
+            margin: 10px;
+            cursor: pointer;
+            position: relative;
+            width: fit-content;
+            transition: 0.2s;
+
+            &::after {
+                content: 'True Fashion';
+                position: absolute;
+                font-size: 18px;
+                bottom: 0%;
+                right: -50%;
+                opacity: 0;
+                transition: 300ms ease-in-out;
+            }
+        }
+    }
+}
+
+.container.secondary {
+    background-color: #262626;
+    position: relative;
+    padding: 20px;
+
+    .search-intro {
+        padding: 10px;
+
+        h2 {
+            font-weight: normal;
+            font-size: 30px;
+            padding: 10px;
+        }
+        p {
+            font-size: 16px;
+            padding: 15px;
+        }
+    }
+
+    .search {
+        padding: 20px;
+        position: relative;
+
+        .search-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+
+            input[type=text] {
+                width: 90%;
+                height: 30px;
+                border-radius: 10px;
+            }
+
+            button {
+                width: 9%;
+                border-radius: 10px;
+                height: 30px;
+                
+            }
+        }
+    }
+}
+
+.trending-tab {
+
+    h3 {
+        font-size: 25px;
+        padding: 10px 10px 10px 20px;
+        cursor: pointer;
+        width: fit-content;
+        
+
+        &::after, &::before {
+            content: ' ';
+            display: block;
+            border-bottom: 2px solid black;
+            transform: scaleX(0);
+            transition: 0.2s ease-in-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+        }
+    }
+
+    .trending-tab-container {
+        display: flex;
+        width: 100%;
+
+        div {
+            width: 20%;
+            padding: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+
+    }
+}
