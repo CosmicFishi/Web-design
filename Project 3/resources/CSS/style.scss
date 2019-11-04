@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto Slab', serif;
+    text-decoration: none;
 }
 
 .container {
@@ -191,5 +192,134 @@
             }
         }
 
+    }
+}
+
+.p-left {
+    background-color: #F2F2F2;
+    position: relative;
+    display: flex;
+    padding: 20px;
+
+    .p-left-image {
+        width: 30%;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .p-left-para {
+        width: 70%;
+        padding: 20px;
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+
+            h2 {
+                padding: 20px;
+                font-weight: normal;
+                cursor: pointer;
+            }
+            
+            p {
+                padding: 10px;
+            }
+
+            a {
+                color: black;
+                width: fit-content;
+                border-bottom: 1px solid black;
+                position: relative;
+                
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    top: 15%;
+                    right: -35%;
+                    border-color: transparent transparent transparent black ;
+                    border-style: solid;;
+                    border-width: 8px;
+                    transition: 0.1s ease-in-out;
+                    transform-origin: 0% 50%;
+                    transform: scaleX(0);;
+                }
+                &:hover:after {
+                    transform: scaleX(1);
+                }
+            }
+
+            
+        }
+    }
+}
+
+.p-right {
+    position: relative;
+    display: flex;
+    padding: 20px;
+
+    .p-right-image {
+        width: 40%;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .p-right-para {
+        width: 60%;
+        padding: 20px;
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+
+            h2 {
+                padding: 20px;
+                font-weight: normal;
+                cursor: pointer;
+            }
+            
+            p {
+                padding: 10px;
+            }
+
+            a {
+                color: black;
+                width: fit-content;
+                border-bottom: 1px solid black;
+                position: relative;
+
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    top: 15%;
+                    right: -30%;
+                    border-color: transparent transparent transparent black ;
+                    border-style: solid;;
+                    border-width: 8px;
+                    transition: 0.1s ease-in-out;
+                    transform-origin: 0% 50%;
+                    transform: scaleX(0);;
+                }
+                &:hover:after {
+                    transform: scaleX(1);
+                }
+            }
+        }
     }
 }
