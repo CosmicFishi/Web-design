@@ -8,3 +8,8 @@ $(document).ready(function() {
         $("p").text(a=0);
     });
 });
+
+function test(a,b) {
+    return a*b;
+}
+
